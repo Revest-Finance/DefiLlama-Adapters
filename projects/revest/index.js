@@ -62,10 +62,10 @@ async function fantomTVL(time, block) {
     "https://defi-llama-feed.vercel.app/api/address?chainId=250"
   );
 
-  const transform = await transformFantomAddress();
-
   const APIURL =
     "https://api.thegraph.com/subgraphs/name/revest-finance/revestfantomtvl";
+
+  const transform = await transformFantomAddress();
 
   const balances = await queryGraph("fantom:", APIURL, tokenRes);
 
